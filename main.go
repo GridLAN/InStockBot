@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"strings"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
@@ -133,6 +134,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("Cannot open the session: %v", err)
 	}
+
+	// message the channel to inform that bot is up and monitoring the WatchedProducts
+	_, _ = s.ChannelMessageSend(ChannelID, "Bot is up and monitoring the following products: "+strings.Join(WatchedProducts, ", "))
 
 	// check Ubiquiti stock every 30 seconds
 	for {
