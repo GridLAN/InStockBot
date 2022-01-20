@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  APPLICATION: InStockBot
+  APPLICATION: instockbot
 
 jobs:
   docker-build:
