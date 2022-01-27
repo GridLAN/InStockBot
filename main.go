@@ -19,7 +19,7 @@ import (
 var (
 	GuildID         = flag.String("guild", "", "Test guild ID. If not passed - bot registers commands globally")
 	BotToken        = os.Getenv("TOKEN")
-	WatchedProducts = []string{"G4 Doorbell Pro", "Camera G4 Instant"}
+	WatchedProducts = []string{"Protect Door Lock", "Camera G4 Instant"}
 	ChannelID       = "933566907666292768"
 )
 
